@@ -10,4 +10,3 @@ PAGE_MAP: Dict[str, Type[Page]] = {
     'Statistics without Android projects': StatsWithoutAndroidProjects,
     'Custom statistics': CustomStats,
 }
-
