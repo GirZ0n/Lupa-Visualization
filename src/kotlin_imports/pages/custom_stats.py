@@ -59,5 +59,5 @@ class CustomStats(Page):
                 data=write_to_csv(stats, ["package_name", "count"]),
                 file_name='stats.csv',
                 mime='text/csv',
-                key=cls.key,
+                key=f'{cls.key}_download_button',
             )
