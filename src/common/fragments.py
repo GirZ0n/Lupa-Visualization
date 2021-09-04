@@ -27,7 +27,7 @@ def _show_config_field(
     *,
     text_input_label: str,
     text_input_help: Optional[str],
-    file_uploader_label: Optional[str],
+    file_uploader_label: str,
     file_uploader_help: Optional[str],
     key: str,
 ) -> Tuple[Optional[str], Optional[Path]]:
