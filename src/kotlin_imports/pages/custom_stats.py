@@ -56,7 +56,7 @@ class CustomStats(Page):
 
             st.download_button(
                 label='Download statistics',
-                data=write_to_csv(stats, ["package_name", "count"]),
+                data=write_to_csv(stats, ['package_name', 'count']),
                 file_name='stats.csv',
                 mime='text/csv',
                 key=f'{cls.key}_download_button',

@@ -8,7 +8,7 @@ import streamlit as st
 
 
 def get_prefix(fq_name: str, prefix_len: int) -> str:
-    return '.'.join(fq_name.split(".")[:prefix_len])
+    return '.'.join(fq_name.split('.')[:prefix_len])
 
 
 def get_package(fq_name: str, packages: List[str]) -> str:
@@ -36,7 +36,7 @@ def read_from_csv(csv_path: Union[str, Path], column_name: str) -> List[str]:
 
 
 def to_csv_line(data: List[str]) -> str:
-    return ",".join(map(str, data))
+    return ','.join(map(str, data))
 
 
 def write_to_csv(data: Dict[str, int], titles: List[str]) -> str:

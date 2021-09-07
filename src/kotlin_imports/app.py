@@ -22,5 +22,5 @@ def main():
     PAGE_MAP[page_name].show()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
