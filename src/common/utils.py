@@ -8,7 +8,7 @@ import streamlit as st
 
 
 @st.cache
-def read_stats(csv_path: Union[Path, str], x_label: str = 'fq_name', y_label: str = 'count') -> Dict[str, int]:
+def read_stats(csv_path: Union[Path, str], *, x_label: str, y_label: str) -> Dict[str, int]:
     df = pd.read_csv(csv_path)
     return {row[x_label]: row[y_label] for _, row in df.iterrows()}
 
