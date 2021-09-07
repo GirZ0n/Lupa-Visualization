@@ -1,0 +1,14 @@
+config_name,count
+implementation,101128
+testImplementation,17324
+androidTestImplementation,16215
+kapt,4686
+classpath,25910
+api,7009
+annotationProcessor,670
+compile,13363
+compileOnly,1948
+testCompile,3254
+testRuntimeOnly,681
+testRuntime,173
+runtimeOnly,436
