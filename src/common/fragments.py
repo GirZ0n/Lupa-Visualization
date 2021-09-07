@@ -7,20 +7,34 @@ import streamlit as st
 from src.common.utils import get_bar_plot
 
 
-def _parse_config_field(text_input: str, csv_file: Optional[Path], column: str = 'package_name') -> Optional[set]:
-    result = set()
+def _parse_config_field(
+    text_input: str,
+    csv_file: Optional[Path] = None,
+    column: Optional[str] = None,
+) -> Optional[set]:
+    """
+    Parses text input and csv file. If both text and file are passed, the results of their parsing are merged.
+    """
+
+    words = set()
 
     if text_input != '':
-        result.update({elem.strip() for elem in text_input.split(',') if elem})
+        words.update({word.strip() for word in text_input.split(',') if word})
 
     if csv_file is not None:
         df = pd.read_csv(csv_file)
-        result.update(df[column].to_list())
 
-    if not result:
+        if column is None:
+            st.error('Failed to read data from file. The column name was not passed.')
+        elif column not in df.columns:
+            st.error(f'Failed to read data from file. The column named "{column}" is not in the given table.')
+        else:
+            words.update(df[column].to_list())
+
+    if not words:
         return None
 
-    return result
+    return words
 
 
 def _show_config_field(
@@ -31,12 +45,12 @@ def _show_config_field(
     file_uploader_help: Optional[str],
     key: str,
 ) -> Tuple[Optional[str], Optional[Path]]:
-    col1, col2 = st.columns(2)
+    left_column, right_column = st.columns(2)
 
-    with col1:
+    with left_column:
         text = st.text_input(label=text_input_label, help=text_input_help, key=f'{key}_text_input')
 
-    with col2:
+    with right_column:
         file = st.file_uploader(
             label=file_uploader_label,
             help=file_uploader_help,
@@ -48,9 +62,9 @@ def _show_config_field(
 
 
 def _show_bar_plot_config(key: str) -> Dict[str, Any]:
-    with st.expander("Config"):
-        col1, _ = st.columns(2)
-        with col1:
+    with st.expander('Config'):
+        left_column, _ = st.columns(2)
+        with left_column:
             bars_count = st.number_input(
                 'bars_count:',
                 value=50,
@@ -70,7 +84,7 @@ def _show_bar_plot_config(key: str) -> Dict[str, Any]:
             key=f'{key}_bars_ignore',
         )
 
-        bars_ignore = _parse_config_field(bars_ignore_text_input, bars_ignore_csv_file)
+        bars_ignore = _parse_config_field(bars_ignore_text_input, bars_ignore_csv_file, 'package_name')
 
         bars_select_text_input, bars_select_csv_file = _show_config_field(
             text_input_label='bars_select:',
@@ -84,7 +98,7 @@ def _show_bar_plot_config(key: str) -> Dict[str, Any]:
             key=f'{key}_bars_select',
         )
 
-        bars_select = _parse_config_field(bars_select_text_input, bars_select_csv_file)
+        bars_select = _parse_config_field(bars_select_text_input, bars_select_csv_file, 'package_name')
 
         return {
             'bars_count': int(bars_count),
