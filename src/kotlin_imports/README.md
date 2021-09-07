@@ -4,7 +4,7 @@ This application will allow you to visualize the statistics of imports in Kotlin
 The collected data can be found [here](../../../resources/kotlin_imports/data/).
 
 ## How to view
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/girz0n/kotlin-analysis-visualization/kotlin-imports/src/kotlin_imports/app.py)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/girz0n/kotlin-analysis-visualization/main/src/kotlin_imports/app.py)
 
 Or you can run the visualization locally:
 ```bash
