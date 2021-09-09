@@ -1,5 +1,5 @@
 from src.common.fragments import show_bar_plot_with_config
-from src.kotlin_imports.common.utils import get_fq_names_stats, write_to_csv
+from src.kotlin_imports.common.utils import get_fq_names_stats
 from src.kotlin_imports.pages import Page
 import streamlit as st
 
@@ -12,9 +12,9 @@ class CustomStats(Page):
     def show(cls):
         st.title(cls.title)
 
-        col1, col2, col3 = st.columns(3)
+        left_column, middle_column, right_column = st.columns(3)
 
-        with col1:
+        with left_column:
             fq_name_file = st.file_uploader(
                 label='fq_names:',
                 help='Path to a CSV file which contains column `import` with import directives fully qualified name',
@@ -22,7 +22,7 @@ class CustomStats(Page):
                 key=f'{cls.key}_fq_name',
             )
 
-        with col2:
+        with middle_column:
             filter_packages_file = st.file_uploader(
                 label='filter_packages:',
                 help='Path to a CSV file which contains column `package_name` with package names to filter packages by',
@@ -30,7 +30,7 @@ class CustomStats(Page):
                 key=f'{cls.key}_filter_packages',
             )
 
-        with col3:
+        with right_column:
             group_by_packages_file = st.file_uploader(
                 label='group_by_packages:',
                 help='Path to a CSV file which contains column `package_name` with package names to group imports by',
@@ -49,14 +49,16 @@ class CustomStats(Page):
                 header='',
                 description='',
                 df=stats,
-                x_axis='package name',
+                x_axis='fq_name',
+                x_label='Package name',
                 y_axis='count',
+                y_label='Count',
                 key=cls.key,
             )
 
             st.download_button(
                 label='Download statistics',
-                data=write_to_csv(stats, ['package_name', 'count']),
+                data=stats.to_csv(index=False),
                 file_name='stats.csv',
                 mime='text/csv',
                 key=f'{cls.key}_download_button',

@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import pandas as pd
 import streamlit as st
@@ -110,10 +110,13 @@ def _show_bar_plot_config(key: str) -> Dict[str, Any]:
 def show_bar_plot_with_config(
     *,
     header: str,
-    description: Optional[str],
-    df: Dict[str, int],
+    description: Optional[str] = None,
+    df: pd.DataFrame,
     x_axis: str,
-    y_axis: str,
+    y_axis: Union[str, List[str]],
+    x_label: Optional[str] = None,
+    y_label: Optional[str] = None,
+    sort_by: Optional[Union[str, List[str]]] = None,
     key: str,
 ):
     st.header(header)
@@ -122,5 +125,5 @@ def show_bar_plot_with_config(
         st.markdown(description)
 
     config = _show_bar_plot_config(key=key)
-    fig = get_bar_plot(df, x=x_axis, y=y_axis, **config)
+    fig = get_bar_plot(df, x=x_axis, y=y_axis, x_title=x_label, y_title=y_label, sort_by=sort_by, **config)
     st.plotly_chart(fig, use_container_width=True)
