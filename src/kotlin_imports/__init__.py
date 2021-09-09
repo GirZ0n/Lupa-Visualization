@@ -1,3 +1,3 @@
-from pathlib import Path
+from src import RESOURCES_FOLDER
 
-DATA_FOLDER = Path(__file__).absolute().parents[2] / 'resources' / 'kotlin_imports' / 'data'
+DATA_FOLDER = RESOURCES_FOLDER / 'kotlin_imports' / 'data'
