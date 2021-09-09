@@ -114,8 +114,8 @@ def show_bar_plot_with_config(
     df: pd.DataFrame,
     x_axis: str,
     y_axis: Union[str, List[str]],
-    x_label: Optional[str] = None,
-    y_label: Optional[str] = None,
+    x_title: Optional[str] = None,
+    y_title: Optional[str] = None,
     sort_by: Optional[Union[str, List[str]]] = None,
     key: str,
 ):
@@ -125,5 +125,5 @@ def show_bar_plot_with_config(
         st.markdown(description)
 
     config = _show_bar_plot_config(key=key)
-    fig = get_bar_plot(df, x=x_axis, y=y_axis, x_title=x_label, y_title=y_label, sort_by=sort_by, **config)
+    fig = get_bar_plot(df, x=x_axis, y=y_axis, x_title=x_title, y_title=y_title, sort_by=sort_by, **config)
     st.plotly_chart(fig, use_container_width=True)

@@ -23,9 +23,9 @@ def show_page(
         description='The occurrence of the mined import directives / fully qualified names from projects.',
         df=import_stats,
         x_axis='fq_name',
-        x_label='Import name',
+        x_title='Import name',
         y_axis='count',
-        y_label='Count',
+        y_title='Count',
         key=f'{key}_import_stats',
     )
 
@@ -37,8 +37,8 @@ def show_page(
         ),
         df=import_stats_by_package,
         x_axis='fq_name',
-        x_label='Package name',
+        x_title='Package name',
         y_axis='count',
-        y_label='Count',
+        y_title='Count',
         key=f'{key}_import_stats_by_package',
     )

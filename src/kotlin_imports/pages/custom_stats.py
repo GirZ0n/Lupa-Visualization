@@ -50,9 +50,9 @@ class CustomStats(Page):
                 description='',
                 df=stats,
                 x_axis='fq_name',
-                x_label='Package name',
+                x_title='Package name',
                 y_axis='count',
-                y_label='Count',
+                y_title='Count',
                 key=cls.key,
             )
 
