@@ -16,8 +16,8 @@ class StatsForAllProject(Page):
 
     @classmethod
     def show(cls):
-        import_stats = read_stats(cls.import_stats_df_path, x_label='fq_name', y_label='count')
-        import_stats_by_package = read_stats(cls.import_stats_by_package_df_path, x_label='fq_name', y_label='count')
+        import_stats = read_stats(cls.import_stats_df_path)
+        import_stats_by_package = read_stats(cls.import_stats_by_package_df_path)
 
         show_page(
             title=cls.title,

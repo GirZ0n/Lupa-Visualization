@@ -35,21 +35,12 @@ def read_from_csv(csv_path: Union[str, Path], column_name: str) -> List[str]:
     return list(map(str, pd.read_csv(csv_path)[column_name]))
 
 
-def to_csv_line(data: List[str]) -> str:
-    return ','.join(map(str, data))
-
-
-def write_to_csv(data: Dict[str, int], titles: List[str]) -> str:
-    rows = [to_csv_line(titles)] + [to_csv_line([name, str(count)]) for name, count in data.items()]
-    return '\n'.join(rows)
-
-
 @st.cache
 def get_fq_names_stats(
     fq_names_path: Union[str, Path],
     filter_packages_path: Optional[Union[str, Path]] = None,
     group_by_packages_path: Optional[Union[str, Path]] = None,
-) -> Dict[str, int]:
+) -> pd.DataFrame:
     fq_names = read_from_csv(fq_names_path, 'import')
 
     if filter_packages_path is not None:
@@ -64,4 +55,4 @@ def get_fq_names_stats(
     else:
         fq_names_stats = Counter(fq_names)
 
-    return fq_names_stats
+    return pd.DataFrame(fq_names_stats.items(), columns=['fq_name', 'count'])
