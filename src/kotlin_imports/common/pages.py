@@ -1,5 +1,4 @@
-from typing import Dict
-
+import pandas as pd
 import streamlit as st
 
 from src.common.fragments import show_bar_plot_with_config
@@ -9,8 +8,8 @@ def show_page(
     *,
     title: str,
     description: str,
-    import_stats: Dict[str, int],
-    import_stats_by_package: Dict[str, int],
+    import_stats: pd.DataFrame,
+    import_stats_by_package: pd.DataFrame,
     key: str,
 ):
     st.title(title)
@@ -21,8 +20,10 @@ def show_page(
         header='The occurrence of imports FQ names',
         description='The occurrence of the mined import directives / fully qualified names from projects.',
         df=import_stats,
-        x_axis='import name',
+        x_axis='fq_name',
+        x_title='Import name',
         y_axis='count',
+        y_title='Count',
         key=f'{key}_import_stats',
     )
 
@@ -33,7 +34,9 @@ def show_page(
             'heuristics (number of child nodes, number of leaves, occurrence, depth, size of the subtree).'
         ),
         df=import_stats_by_package,
-        x_axis='package name',
+        x_axis='fq_name',
+        x_title='Package name',
         y_axis='count',
+        y_title='Count',
         key=f'{key}_import_stats_by_package',
     )
