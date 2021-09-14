@@ -1,9 +1,10 @@
+import streamlit as st
+
 from src.common.fragments import show_bar_plot_with_config
 from src.common.utils import read_stats
 from src.kotlin_gradle_dependencies import DATA_FOLDER
+from src.kotlin_gradle_dependencies.common.column_name import ColumnName
 from src.kotlin_gradle_dependencies.pages import Page
-
-import streamlit as st
 
 
 class PerProjectStats(Page):
@@ -30,8 +31,8 @@ class PerProjectStats(Page):
             header='The occurrence of Gradle dependencies *groupId:artifactId*',
             description='For all projects',
             df=unique_full_name_stats_all,
-            x_axis='groupId:artifactId',
-            y_axis='count',
+            x_axis=ColumnName.GROUP_ID_ARTIFACT_ID.value,
+            y_axis=ColumnName.COUNT.value,
             y_title='Count',
             key=f'{cls.key}_all',
         )
@@ -40,8 +41,8 @@ class PerProjectStats(Page):
             header='The occurrence of Gradle dependencies *groupId:artifactId*',
             description='Without Android projects',
             df=unique_full_name_stats_without_android,
-            x_axis='groupId:artifactId',
-            y_axis='count',
+            x_axis=ColumnName.GROUP_ID_ARTIFACT_ID.value,
+            y_axis=ColumnName.COUNT.value,
             y_title='Count',
             key=f'{cls.key}_without_android',
         )

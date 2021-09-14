@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 
 from src.common.fragments import show_bar_plot_with_config
+from src.kotlin_gradle_dependencies.common.column_name import ColumnName
 
 
 def show_page(
@@ -20,55 +21,55 @@ def show_page(
     show_bar_plot_with_config(
         header='The occurrence of Gradle dependencies *groupId:artifactId*',
         df=full_name_stats,
-        x_axis='groupId:artifactId',
-        y_axis='count',
+        x_axis=ColumnName.GROUP_ID_ARTIFACT_ID.value,
+        y_axis=ColumnName.COUNT.value,
         y_title='Count',
         key=f'{key}_full_name_stats',
     )
 
     columns_to_show = full_name_stats.columns.to_list()
-    columns_to_show.remove('groupId:artifactId')
-    columns_to_show.remove('count')
+    columns_to_show.remove(ColumnName.GROUP_ID_ARTIFACT_ID.value)
+    columns_to_show.remove(ColumnName.COUNT.value)
 
     show_bar_plot_with_config(
         header='The occurrence of gradle dependencies *groupId:artifactId* with configuration',
         df=full_name_stats,
-        x_axis='groupId:artifactId',
+        x_axis=ColumnName.GROUP_ID_ARTIFACT_ID.value,
         y_axis=columns_to_show,
         y_title='Count',
-        sort_by=['count'],
+        sort_by=ColumnName.COUNT.value,
         key=f'{key}_full_name_multi_stats',
     )
 
     show_bar_plot_with_config(
         header='The occurrence of Gradle dependencies *groupId*',
         df=groups_stats,
-        x_axis='groupId',
-        y_axis='count',
+        x_axis=ColumnName.GROUP_ID.value,
+        y_axis=ColumnName.COUNT.value,
         y_title='Count',
         key=f'{key}_group_stats',
     )
 
     columns_to_show = groups_stats.columns.to_list()
-    columns_to_show.remove('groupId')
-    columns_to_show.remove('count')
+    columns_to_show.remove(ColumnName.GROUP_ID.value)
+    columns_to_show.remove(ColumnName.COUNT.value)
 
     show_bar_plot_with_config(
         header='The occurrence of Gradle dependencies *groupId* with configuration',
         df=groups_stats,
-        x_axis='groupId',
+        x_axis=ColumnName.GROUP_ID.value,
         y_axis=columns_to_show,
         y_title='Count',
-        sort_by='count',
+        sort_by=ColumnName.COUNT.value,
         key=f'{key}_group_multi_stats',
     )
 
     show_bar_plot_with_config(
         header='The occurrence of Gradle dependencies configuration',
         df=config_stats,
-        x_axis='config_name',
+        x_axis=ColumnName.CONFIG_NAME.value,
         x_title='Configuration',
-        y_axis='count',
+        y_axis=ColumnName.COUNT.value,
         y_title='Count',
         key=f'{key}_config_stats',
     )
