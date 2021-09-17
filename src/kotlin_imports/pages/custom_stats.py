@@ -1,7 +1,9 @@
+import streamlit as st
+
 from src.common.fragments import show_bar_plot_with_config
+from src.kotlin_imports.common.column_name import ColumnName
 from src.kotlin_imports.common.utils import get_fq_names_stats
 from src.kotlin_imports.pages import Page
-import streamlit as st
 
 
 class CustomStats(Page):
@@ -49,9 +51,9 @@ class CustomStats(Page):
                 header='',
                 description='',
                 df=stats,
-                x_axis='fq_name',
+                x_axis=ColumnName.FQ_NAME.value,
                 x_title='Package name',
-                y_axis='count',
+                y_axis=ColumnName.COUNT.value,
                 y_title='Count',
                 key=cls.key,
             )
