@@ -1927,7 +1927,6 @@ ttk,6
 colorama,52
 ipywidgets,9
 IPython.html.widgets,3
-urllib,161
 pymake,1
 pkg_resources.Requirement,8
 pkg_resources.resource_filename,20
@@ -2378,9 +2377,6 @@ cStringIO.StringIO,46
 thread.allocate_lock,5
 dummy_thread.allocate_lock,4
 urlparse.urlsplit,15
-urllib.unquote_plus,16
-urllib.urlencode,39
-urllib.urlopen,16
 bs4.Tag,3
 bs4.Comment,3
 bs4.ProcessingInstruction,2
@@ -2529,7 +2525,6 @@ zope.interface.interfaces.IComponents,1
 zope.interface.interfaces.IAttribute,1
 zope.interface.interfaces.IMethod,1
 zope.interface.interfaces.IInterface,2
-urllib.unquote,33
 Queue.LifoQueue,3
 Queue.Full,6
 six.moves.urllib.parse.urljoin,7
@@ -2576,7 +2571,6 @@ six.int2byte,3
 six.indexbytes,4
 six.PY3,11
 six.text_type,21
-urllib.quote,52
 backports.pbkdf2.pbkdf2_hmac,1
 monotonic.monotonic,4
 pymongocrypt.auto_encrypter.AutoEncrypter,1
@@ -2681,11 +2675,6 @@ win32event.QS_ALLINPUT,2
 UserDict.UserDict,10
 six.moves.urllib_parse,4
 dummy_threading.Thread,4
-urllib.urlretrieve,20
-urllib.url2pathname,5
-urllib.pathname2url,9
-urllib.ContentTooShortError,4
-urllib.splittype,4
 urllib2.HTTPError,30
 urllib2.HTTPBasicAuthHandler,5
 urllib2.HTTPPasswordMgr,5
@@ -2717,11 +2706,6 @@ genshi.core.END_CDATA,6
 genshi.core.PI,6
 genshi.core.COMMENT,6
 genshi.core.Attrs,4
-urllib.quote_plus,19
-urllib.getproxies,11
-urllib.proxy_bypass,9
-urllib.proxy_bypass_environment,6
-urllib.getproxies_environment,6
 urllib2.parse_http_list,10
 Cookie.Morsel,12
 win32com.shell.shellcon,12
@@ -3633,7 +3617,6 @@ scipy.spatial.cKDTree,4
 scipy.ndimage.zoom,4
 pexpect,26
 mock.sentinel,3
-urllib.splitquery,2
 sha.new,1
 xmlrpclib.Fault,3
 md5.md5,10
@@ -20332,7 +20315,6 @@ ConnectionError,1
 Default.sort,1
 flake8.engine.get_style_guide,1
 flake8.api.legacy.get_style_guide,1
-urllib.addinfourl,4
 httplib.HTTPResponse,2
 urllib2.parse_keqv_list,1
 urllib2.ProxyBasicAuthHandler,1
@@ -29218,10 +29200,6 @@ gdbm,1
 dumbdbm,1
 whichdb,1
 __builtin__.intern,1
-urllib.toBytes,1
-urllib.addbase,1
-urllib.addclosehook,1
-urllib.addinfo,1
 robotparser,1
 Tkdnd,1
 Tix,1
@@ -29245,7 +29223,6 @@ ipaddr.IPv6Address,1
 ipaddr.summarize_address_range,1
 ipaddr.collapse_address_list,1
 ipaddr.IPv4Network,1
-urllib.__version__,1
 rfc822.parsedate,1
 six.moves.xmlrpc_client.loads,1
 six.moves.xmlrpc_client.dumps,1
@@ -29734,7 +29711,6 @@ pgpdump.utils.PgpdumpException,1
 pgpdump.utils.get_int4,1
 spambayes.Histogram.Hist,1
 classifier.Classifier,1
-urllib.URLopener,1
 fasteners.InterProcessLock,1
 gui_o_matic.control.GUIPipeControl,1
 librtmp,1
@@ -37642,16 +37618,6 @@ htmlentitydefs.entitydefs,1
 nt.stat,1
 dos.stat,1
 os2.stat,1
-urllib.unwrap,1
-urllib.splithost,1
-urllib.splitport,1
-urllib.splittag,1
-urllib.splitattr,1
-urllib.ftpwrapper,1
-urllib.splituser,1
-urllib.splitpasswd,1
-urllib.splitvalue,1
-urllib.localhost,1
 win32api.RegQueryValueEx,1
 win32api.RegOpenKeyEx,1
 win32api.RegCloseKey,1
