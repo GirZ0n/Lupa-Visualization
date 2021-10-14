@@ -10,8 +10,8 @@ class StatsForAllImports(Page):
         'We mined all *imports\' fully qualified names* from each Python file '
         'in the dataset using PSI (see `/resources/python_imports/data/import_data.csv`).'
     )
-    import_stats_df_path = DATA_FOLDER / 'import_stats.csv'
-    import_stats_by_package_df_path = DATA_FOLDER / 'import_stats_by_package.csv'
+    import_stats_df_path = DATA_FOLDER / 'all' / 'import_stats.csv'
+    import_stats_by_package_df_path = DATA_FOLDER / 'all' / 'import_stats_by_package.csv'
     key = 'all'
 
     @classmethod
