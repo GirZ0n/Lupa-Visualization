@@ -24,7 +24,7 @@ def show_page(
         x_axis=ColumnName.FQ_NAME.value,
         x_title='Import name',
         y_axis=ColumnName.COUNT.value,
-        y_title='Count',
+        y_title='Number of projects',
         key=f'{key}_import_stats',
     )
 
@@ -38,6 +38,6 @@ def show_page(
         x_axis=ColumnName.FQ_NAME.value,
         x_title='Package name',
         y_axis=ColumnName.COUNT.value,
-        y_title='Count',
+        y_title='Number of imports',
         key=f'{key}_import_stats_by_package',
     )
