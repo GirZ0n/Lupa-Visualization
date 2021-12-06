@@ -32,7 +32,7 @@ def fq_names_group_by_packages_stats(fq_names: List[str], packages: List[str]) -
 
 @st.cache
 def read_from_csv(csv_path: Union[str, Path], column_name: str) -> List[str]:
-    return list(map(str, pd.read_csv(csv_path)[column_name]))
+    return list(map(str, pd.read_csv(csv_path, keep_default_na=False)[column_name]))
 
 
 @st.cache

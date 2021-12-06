@@ -9,7 +9,7 @@ import streamlit as st
 
 @st.cache
 def read_stats(csv_path: Union[Path, str]) -> pd.DataFrame:
-    return pd.read_csv(csv_path)
+    return pd.read_csv(csv_path, keep_default_na=False)
 
 
 def get_bar_plot(

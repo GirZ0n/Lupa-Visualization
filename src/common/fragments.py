@@ -22,7 +22,7 @@ def _parse_config_field(
         words.update({word.strip() for word in text_input.split(',') if word})
 
     if csv_file is not None:
-        df = pd.read_csv(csv_file)
+        df = pd.read_csv(csv_file, keep_default_na=False)
 
         if column is None:
             st.error('Failed to read data from file. The column name was not passed.')
