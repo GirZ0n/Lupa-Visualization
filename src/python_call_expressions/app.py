@@ -17,7 +17,7 @@ def main():
 
         with st.expander('Glossary'):
             st.markdown('`np.zeros()` - *call expression*')
-            st.markdown('`"numpy.core._multiarray_umath.zeros"` - *call expression fully qualified name*')
+            st.markdown('`numpy.core._multiarray_umath.zeros` - *call expression fully qualified name*')
 
     PAGE_MAP[page_name].show()
 
