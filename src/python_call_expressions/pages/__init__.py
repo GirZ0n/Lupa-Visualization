@@ -5,6 +5,6 @@ from src.python_call_expressions.pages.stats_for_all_call_expressions import Sta
 from src.python_call_expressions.pages.stats_without_stdlib_and_builtins import StatsWithoutStdlibAndBuiltins
 
 PAGE_MAP: Dict[str, Type[Page]] = {
-    'Statistics for all imports': StatsForAllCallExpressions,
-    'Statistics without stdlib': StatsWithoutStdlibAndBuiltins,
+    'Statistics for all expressions': StatsForAllCallExpressions,
+    'Statistics without stdlib and builtins': StatsWithoutStdlibAndBuiltins,
 }
