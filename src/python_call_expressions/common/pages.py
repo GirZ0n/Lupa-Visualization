@@ -29,6 +29,7 @@ def show_page(
         default=chosen_categories,
         key=f'{key}_categories_multiselect',
     )
+    st.session_state[f'{key}_chosen_categories'] = categories
 
     fq_name = st.text_input('Fully qualified name:', key=f'{key}_fq_name_input')
     if fq_name != '':
