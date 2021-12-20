@@ -20,6 +20,7 @@ def get_bar_plot(
     x_title: Optional[str] = None,
     y_title: Optional[str] = None,
     sort_by: Optional[Union[str, List[str]]] = None,
+    color: Optional[str] = None,
     bars_count: Optional[int] = None,
     bars_ignore: Optional[Set[str]] = None,
     bars_select: Optional[Set[str]] = None,
@@ -33,6 +34,7 @@ def get_bar_plot(
     :param x_title: X-axis title.
     :param y_title: Y-axis title.
     :param sort_by: Name or list of names to sort by.
+    :param color: The name of the column in 'stats' by which you want to group the statistics.
     :param bars_count: Number of bars to show from start in sorted by count order.
     :param bars_ignore: Ignore bars with names start with one from this set.
     :param bars_select: Select bars with names start with one from this set.
@@ -54,7 +56,8 @@ def get_bar_plot(
     if bars_count is not None:
         df = df[:bars_count]
 
-    fig = px.bar(df, x=x, y=y)
+    fig = px.bar(df, x=x, y=y, color=color)
+    fig.update_layout(xaxis_categoryorder='total descending')
 
     if x_title is not None:
         fig.update_xaxes(title=x_title)
