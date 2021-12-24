@@ -1,4 +1,4 @@
-# Kotlin-Analysis-Visualization
+# Lupa-Visualization
 In this repository you can find a visualization for the statistics gathered with [Lupa](https://github.com/JetBrains-Research/Lupa).
 
 ## Available visualizations
