@@ -1,5 +1,5 @@
 # Kotlin-Analysis-Visualization
-In this repository you can find a visualization for the statistics gathered with [Kotlin-Analysis](https://github.com/JetBrains-Research/Kotlin-Analysis).
+In this repository you can find a visualization for the statistics gathered with [Lupa](https://github.com/JetBrains-Research/Lupa).
 
 ## Available visualizations
 - [Kotlin Imports](./src/kotlin_imports)
