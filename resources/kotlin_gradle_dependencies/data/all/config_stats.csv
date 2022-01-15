@@ -1,14 +1,3 @@
-config_name,count
-implementation,101128
-testImplementation,17324
-androidTestImplementation,16215
-kapt,4686
-classpath,25910
-api,7009
-annotationProcessor,670
-compile,13363
-compileOnly,1948
-testCompile,3254
-testRuntimeOnly,681
-testRuntime,173
-runtimeOnly,436
+version https://git-lfs.github.com/spec/v1
+oid sha256:91d73d8b6976f67ec258f7ab2307be69d364f6a1cf56b10daaf248c6ab1d8be1
+size 256
