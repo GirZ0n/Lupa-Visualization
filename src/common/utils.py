@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List, Optional, Set, Union
+from typing import List, Literal, Optional, Set, Union
 
 import pandas as pd
 import plotly.express as px
@@ -21,6 +21,7 @@ def get_bar_plot(
     y_title: Optional[str] = None,
     sort_by: Optional[Union[str, List[str]]] = None,
     color: Optional[str] = None,
+    barmode: Literal['stack', 'group', 'overlay', 'relative'] = 'stack',
     bars_count: Optional[int] = None,
     bars_ignore: Optional[Set[str]] = None,
     bars_select: Optional[Set[str]] = None,
@@ -56,7 +57,7 @@ def get_bar_plot(
     if bars_count is not None:
         df = df[:bars_count]
 
-    fig = px.bar(df, x=x, y=y, color=color)
+    fig = px.bar(df, x=x, y=y, color=color, barmode=barmode)
     fig.update_layout(xaxis_categoryorder='total descending')
 
     if x_title is not None:
