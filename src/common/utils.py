@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List, Literal, Optional, Set, Union
+from typing import List, Optional, Set, Union
 
 import pandas as pd
 import plotly.express as px
@@ -21,7 +21,7 @@ def get_bar_plot(
     y_title: Optional[str] = None,
     sort_by: Optional[Union[str, List[str]]] = None,
     color: Optional[str] = None,
-    barmode: Literal['stack', 'group', 'overlay', 'relative'] = 'stack',
+    barmode: str = 'stack',  # Literal['stack', 'group', 'overlay', 'relative']
     bars_count: Optional[int] = None,
     bars_ignore: Optional[Set[str]] = None,
     bars_select: Optional[Set[str]] = None,
@@ -35,6 +35,7 @@ def get_bar_plot(
     :param x_title: X-axis title.
     :param y_title: Y-axis title.
     :param sort_by: Name or list of names to sort by.
+    :param barmode: One of 'stack', 'group', 'overlay' or 'relative'.
     :param color: The name of the column in 'stats' by which you want to group the statistics.
     :param bars_count: Number of bars to show from start in sorted by count order.
     :param bars_ignore: Ignore bars with names start with one from this set.

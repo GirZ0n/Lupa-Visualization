@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import pandas as pd
 import streamlit as st
@@ -118,7 +118,7 @@ def show_bar_plot_with_config(
     y_title: Optional[str] = None,
     sort_by: Optional[Union[str, List[str]]] = None,
     color: Optional[str] = None,
-    barmode: Literal['stack', 'group', 'overlay', 'relative'] = 'stack',
+    barmode: str = 'stack',  # Literal['stack', 'group', 'overlay', 'relative']
     key: str,
 ):
     st.header(header)
