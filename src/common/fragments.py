@@ -3,6 +3,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 
 import pandas as pd
 import streamlit as st
+from pandas import DataFrame
 
 from src.common.utils import get_bar_plot
 
@@ -139,3 +140,29 @@ def show_bar_plot_with_config(
         **config,
     )
     st.plotly_chart(fig, use_container_width=True)
+
+
+def choose_stats(
+    stats_by_name: Dict[str, pd.DataFrame],
+    *,
+    multiselect_label: str,
+    nothing_selected_error: str,
+) -> List[DataFrame]:
+    """
+    Fragment for selecting statistics.
+
+    :param stats_by_name: Dictionary with statistics by name.
+    :param multiselect_label: Label for a widget with names selection.
+    :param nothing_selected_error: Error message if no name is selected.
+
+    :return: List of selected tables with statistics.
+    """
+    available_names = list(stats_by_name.keys())
+    names = st.multiselect(multiselect_label, options=available_names, default=available_names)
+    chosen_stats = [stats for name, stats in stats_by_name.items() if name in names]
+
+    if not chosen_stats:
+        st.error(nothing_selected_error)
+        st.stop()
+
+    return chosen_stats
