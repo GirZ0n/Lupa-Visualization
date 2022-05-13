@@ -1,5 +1,7 @@
+import os
+import re
 from pathlib import Path
-from typing import List, Optional, Set, Union
+from typing import Dict, List, Optional, Set, Union
 
 import pandas as pd
 import plotly.express as px
@@ -10,6 +12,41 @@ import streamlit as st
 @st.cache
 def read_stats(csv_path: Union[Path, str]) -> pd.DataFrame:
     return pd.read_csv(csv_path, keep_default_na=False)
+
+
+@st.cache
+def merge_stats(stats: List[pd.DataFrame], *, index: str, values: List[str]) -> pd.DataFrame:
+    """
+    Merge tables with statistics, summarizing all values having the same index.
+
+    :param stats: List of tables with statistics that need to be merged.
+    :param index: Field for which the values are to be summed.
+    :param values: Fields that need to be summed up.
+
+    :return: Table with merged statistics.
+    """
+    merged_stats = pd.concat(stats)
+    merged_stats = merged_stats.pivot_table(index=index, values=values, aggfunc='sum')
+    merged_stats.reset_index(inplace=True)
+    return merged_stats
+
+
+@st.cache
+def get_stats_by_name(stats_path: Union[Path, str]) -> Dict[str, pd.DataFrame]:
+    """
+    Get all tables with statistics by file name.
+
+    :param stats_path: The path to the folder with the statistics files.
+
+    :return: Dictionary with statistics by filename.
+    """
+    file_names = os.listdir(stats_path)
+
+    stats_by_name = {}
+    for name in file_names:
+        stats_by_name[re.sub(r'\.csv$', '', name)] = read_stats(stats_path / name)
+
+    return stats_by_name
 
 
 def get_bar_plot(
