@@ -38,7 +38,7 @@ def get_stats_by_name(stats_path: Union[Path, str]) -> Dict[str, pd.DataFrame]:
 
     :param stats_path: The path to the folder with the statistics files.
 
-    :return: Dictionary with statistics by filename.
+    :return: Dictionary with statistics by file name.
     """
     file_names = os.listdir(stats_path)
 
