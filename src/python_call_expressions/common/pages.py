@@ -1,7 +1,10 @@
+from typing import Dict
+
 import pandas as pd
 import streamlit as st
 
-from src.common.fragments import show_bar_plot_with_config
+from src.common.fragments import choose_stats, show_bar_plot_with_config
+from src.common.utils import merge_stats
 from src.python_call_expressions.common.column_name import ColumnName
 
 
@@ -9,12 +12,22 @@ def show_page(
     *,
     title: str,
     description: str,
-    stats: pd.DataFrame,
+    stats_by_version: Dict[str, pd.DataFrame],
     key: str,
 ):
     st.title(title)
 
     st.markdown(description)
+
+    chosen_stats = choose_stats(
+        stats_by_version,
+        multiselect_label='Python versions:',
+        nothing_selected_error='You must select at least one version of the language.',
+    )
+
+    values = chosen_stats[0].columns.tolist()
+    values.remove(ColumnName.FQ_NAME.value)
+    stats = merge_stats(chosen_stats, index=ColumnName.FQ_NAME.value, values=values)
 
     categories = stats.columns.tolist()
     categories.remove(ColumnName.FQ_NAME.value)
