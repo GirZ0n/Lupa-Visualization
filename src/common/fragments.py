@@ -146,8 +146,8 @@ def choose_values(values: Iterable[str], *, multiselect_label: str, nothing_sele
     Fragment for selecting values. If no value is selected, an error message will be displayed.
 
     :param values: Values for selecting.
-    :param multiselect_label: Label for a widget with names selection.
-    :param nothing_selected_error: Error message if no name is selected.
+    :param multiselect_label: Label for a widget with values selection.
+    :param nothing_selected_error: Error message if no value is selected.
     :param key: Unique identifier.
 
     :return: List of selected values.
