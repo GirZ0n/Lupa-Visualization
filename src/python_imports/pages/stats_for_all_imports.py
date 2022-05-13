@@ -1,5 +1,5 @@
 from src.common.model import Page
-from src.common.utils import get_stats_by_name, read_stats
+from src.common.utils import get_stats_by_name
 from src.python_imports import DATA_FOLDER
 from src.python_imports.common.pages import show_page
 

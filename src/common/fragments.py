@@ -1,9 +1,8 @@
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple, Union
+from typing import Any, Dict, Iterable, List, Optional, Tuple, Union
 
 import pandas as pd
 import streamlit as st
-from pandas import DataFrame
 
 from src.common.utils import get_bar_plot
 
@@ -142,13 +141,7 @@ def show_bar_plot_with_config(
     st.plotly_chart(fig, use_container_width=True)
 
 
-def choose_values(
-    values: Iterable[str],
-    *,
-    multiselect_label: str,
-    nothing_selected_error: str,
-    key: str
-) -> List[str]:
+def choose_values(values: Iterable[str], *, multiselect_label: str, nothing_selected_error: str, key: str) -> List[str]:
     """
     Fragment for selecting values. If no value is selected, an error message will be displayed.
 
