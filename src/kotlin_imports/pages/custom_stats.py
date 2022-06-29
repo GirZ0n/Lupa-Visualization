@@ -1,9 +1,9 @@
-import streamlit as st
-
 from src.common.fragments import show_bar_plot_with_config
 from src.kotlin_imports.common.column_name import ColumnName
 from src.kotlin_imports.common.utils import get_fq_names_stats
 from src.kotlin_imports.pages import Page
+
+import streamlit as st
 
 
 class CustomStats(Page):

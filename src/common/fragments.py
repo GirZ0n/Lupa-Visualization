@@ -2,9 +2,10 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple, Union
 
 import pandas as pd
-import streamlit as st
 
 from src.common.utils import get_bar_plot
+
+import streamlit as st
 
 
 def _parse_config_field(
@@ -12,10 +13,7 @@ def _parse_config_field(
     csv_file: Optional[Path] = None,
     column: Optional[str] = None,
 ) -> Optional[set]:
-    """
-    Parses text input and csv file. If both text and file are passed, the results of their parsing are merged.
-    """
-
+    """Parse text input and csv file. If both text and file are passed, the results of their parsing are merged."""
     words = set()
 
     if text_input != '':

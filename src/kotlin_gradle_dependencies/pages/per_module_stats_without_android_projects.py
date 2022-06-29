@@ -1,7 +1,7 @@
 from src.common.utils import read_stats
 from src.kotlin_gradle_dependencies import DATA_FOLDER
-from src.kotlin_gradle_dependencies.pages import Page
 from src.kotlin_gradle_dependencies.common.pages import show_page
+from src.kotlin_gradle_dependencies.pages import Page
 
 
 class PerModuleStatsWithoutAndroidProjects(Page):

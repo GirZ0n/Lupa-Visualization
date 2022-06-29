@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Union
 
 import pandas as pd
+
 import streamlit as st
 
 
@@ -23,7 +24,8 @@ def fq_names_group_by_packages_stats(fq_names: List[str], packages: List[str]) -
     fq_name_groups = {
         group_name: len(list(group_members))
         for group_name, group_members in itertools.groupby(
-            sorted(fq_names), lambda fq_name: get_package(fq_name, packages)
+            sorted(fq_names),
+            lambda fq_name: get_package(fq_name, packages),
         )
     }
     fq_name_groups.pop('other', None)

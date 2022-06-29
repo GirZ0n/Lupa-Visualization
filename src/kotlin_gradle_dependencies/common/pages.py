@@ -1,8 +1,9 @@
 import pandas as pd
-import streamlit as st
 
 from src.common.fragments import show_bar_plot_with_config
 from src.kotlin_gradle_dependencies.common.column_name import ColumnName
+
+import streamlit as st
 
 
 def show_page(

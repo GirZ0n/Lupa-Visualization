@@ -1,13 +1,13 @@
 from src.common.utils import read_stats
 from src.kotlin_imports import DATA_FOLDER
-from src.kotlin_imports.pages import Page
 from src.kotlin_imports.common.pages import show_page
+from src.kotlin_imports.pages import Page
 
 
 class StatsForAllProject(Page):
     title = 'Statistics for all projects'
     description = (
-        'We mined all *imports\' fully qualified names* from each Kotlin file '
+        "We mined all *imports' fully qualified names* from each Kotlin file "
         'in the dataset using PSI (see `./data/all/import_data.csv`).'
     )
     import_stats_df_path = DATA_FOLDER / 'all' / 'import_stats.csv'

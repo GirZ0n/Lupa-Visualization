@@ -1,11 +1,12 @@
 from typing import Dict
 
 import pandas as pd
-import streamlit as st
 
 from src.common.fragments import choose_values, show_bar_plot_with_config
 from src.common.utils import merge_stats
 from src.python_call_expressions.common.column_name import ColumnName
+
+import streamlit as st
 
 
 def show_page(

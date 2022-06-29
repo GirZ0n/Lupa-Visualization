@@ -1,7 +1,7 @@
 from src.common.utils import read_stats
 from src.kotlin_imports import DATA_FOLDER
-from src.kotlin_imports.pages import Page
 from src.kotlin_imports.common.pages import show_page
+from src.kotlin_imports.pages import Page
 
 
 class StatsWithoutAndroidProjects(Page):

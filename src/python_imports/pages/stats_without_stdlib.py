@@ -7,7 +7,7 @@ from src.python_imports.common.pages import show_page
 class StatsWithoutStdlib(Page):
     title = 'Statistics without Python Standard Library'
     description = (
-        'We mined all *imports\' fully qualified names* from each Python file '
+        "We mined all *imports' fully qualified names* from each Python file "
         'in the dataset using PSI (see `/resources/python_imports/data/import_data.csv`).'
     )
     import_stats_df_path = DATA_FOLDER / 'exclude_stdlib' / 'import_stats'

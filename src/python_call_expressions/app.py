@@ -1,11 +1,11 @@
 import sys
 
-import streamlit as st
-
 sys.path.append('')
 sys.path.append('../..')
 
 from src.python_call_expressions.pages import PAGE_MAP
+
+import streamlit as st
 
 
 def main():
