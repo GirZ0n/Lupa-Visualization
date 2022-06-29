@@ -21,6 +21,7 @@ The collected data can be found [here](../../resources/python_call_expressions/d
 
 ## Pages
 There are two pages in the visualization:
+
 1. Statistics for all expressions: the statistics for all FQ names are visualized here.
 2. Statistics without stdlib and builtins: the statistics for all FQ names, except for bultin and stdlib FQ names, are visualized here.
 
