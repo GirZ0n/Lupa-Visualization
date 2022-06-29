@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple, Union
 
 import pandas as pd
+
 from src.common.utils import get_bar_plot
 
 import streamlit as st
