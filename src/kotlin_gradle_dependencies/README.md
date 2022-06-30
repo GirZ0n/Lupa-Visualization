@@ -15,5 +15,5 @@ The collected data can be found [here](../../resources/kotlin_gradle_dependencie
 There are three pages in the visualization:
 
 1. Per module statistics for all projects: the statistics per module for all FQ names are visualized here.
-2. Per module statistics without Android projects the statistics per module for all FQ names, except those collected from Android projects, are visualized here.
+2. Per module statistics without Android projects: the statistics per module for all FQ names, except those collected from Android projects, are visualized here.
 3. Per project statistics: the statistics per project for all FQ names are visualized here.
