@@ -4,8 +4,10 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set, Union
 
 import pandas as pd
+
 import plotly.express as px
 import plotly.graph_objects as go
+
 import streamlit as st
 
 
@@ -64,7 +66,7 @@ def get_bar_plot(
     bars_select: Optional[Set[str]] = None,
 ) -> go.Figure:
     """
-    Method for statistics visualization as a bar chart.
+    Visualize statistics as a bar chart.
 
     :param stats: Dataframe with statistics that need to be visualized.
     :param x: Column name in 'stats'.
@@ -80,7 +82,6 @@ def get_bar_plot(
 
     :return: Bar chart plotted according to the passed parameters.
     """
-
     if sort_by is None:
         sort_by = y
 
