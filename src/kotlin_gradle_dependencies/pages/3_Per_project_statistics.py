@@ -19,7 +19,7 @@ if __name__ == '__main__':
     st.markdown(
         '"Per module" statistics can skew the rating of Gradle dependency due to the referencing '
         'in many modules in a project. So, the following plots show Gradle dependencies statistics '
-        'for projects dependencies sets (unique in project).'
+        'for projects dependencies sets (unique in project).',
     )
 
     show_bar_plot_with_config(
