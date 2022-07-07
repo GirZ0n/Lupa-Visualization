@@ -5,10 +5,10 @@ The collected data is located in the [`resources`](./resources) folder. You can 
 
 ## Available visualizations
 The visualization of the following statistics is currently available:
-- [Kotlin Imports](https://share.streamlit.io/girz0n/kotlin-analysis-visualization/main/src/kotlin_imports/app.py)
-- [Kotlin Gradle Dependencies](https://share.streamlit.io/girz0n/kotlin-analysis-visualization/main/src/kotlin_gradle_dependencies/app.py)
-- [Python Imports](https://share.streamlit.io/girz0n/kotlin-analysis-visualization/main/src/python_imports/app.py)
-- [Python Call Expressions](https://share.streamlit.io/girz0n/kotlin-analysis-visualization/main/src/python_call_expressions/app.py)
+- [Kotlin Imports](https://share.streamlit.io/girz0n/lupa-visualization/main/src/kotlin_imports/About.py)
+- [Kotlin Gradle Dependencies](https://share.streamlit.io/girz0n/lupa-visualization/main/src/kotlin_gradle_dependencies/About.py)
+- [Python Imports](https://share.streamlit.io/girz0n/lupa-visualization/main/src/python_imports/About.py)
+- [Python Call Expressions](https://share.streamlit.io/girz0n/lupa-visualization/main/src/python_call_expressions/About.py)
 
 You can also run the visualization locally:
 ```
