@@ -12,6 +12,6 @@ The visualization of the following statistics is currently available:
 
 You can also run the visualization locally:
 ```
-streamlit run src/<visualization_name>/app.py
+streamlit run src/<visualization_name>/About.py
 ```
 where `<visualization_name>` corresponds to the name of the visualization you want to run. For example, for Python Imports `<visualization_name>` will be equal to `python_imports`.

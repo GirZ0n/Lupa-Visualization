@@ -16,6 +16,11 @@ def read_stats(csv_path: Union[Path, str]) -> pd.DataFrame:
     return pd.read_csv(csv_path, keep_default_na=False)
 
 
+def read_content(file_path: Union[Path, str]) -> str:
+    with open(file_path, 'r') as file:
+        return file.read()
+
+
 @st.cache
 def merge_stats(stats: List[pd.DataFrame], *, index: str, values: List[str]) -> pd.DataFrame:
     """

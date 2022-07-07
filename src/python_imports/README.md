@@ -27,4 +27,3 @@ There are three pages in the visualization:
 
 1. Statistics for all imports: the statistics for all FQ names, except for private FQ names, are visualized here.
 2. Statistics without stdlib imports: the statistics for all FQ names, except for private ones and those included in the standard library, are visualized here.
-3. Custom statistics: page, where you can, using existing visualization algorithms, view statistics for any other dataset.
