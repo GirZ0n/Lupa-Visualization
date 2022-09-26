@@ -1,5 +1,4 @@
-import itertools
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Dict, List, Optional, Union
 
@@ -21,13 +20,10 @@ def get_package(fq_name: str, packages: List[str]) -> str:
 
 
 def fq_names_group_by_packages_stats(fq_names: List[str], packages: List[str]) -> Dict[str, int]:
-    fq_name_groups = {
-        group_name: len(list(group_members))
-        for group_name, group_members in itertools.groupby(
-            sorted(fq_names),
-            lambda fq_name: get_package(fq_name, packages),
-        )
-    }
+    fq_name_groups = defaultdict(int)
+    for fq_name in fq_names:
+        fq_name_groups[get_package(fq_name, packages)] += 1
+
     fq_name_groups.pop('other', None)
     return fq_name_groups
 
