@@ -1,5 +1,5 @@
 # Kotlin Imports
-This app will allow you to visualize the statistics of import directives in Kotlin that were gathered using [Lupa](https://github.com/JetBrains-Research/Lupa) framework.
+This app will allow you to visualize the statistics of import directives in Kotlin that were gathered using [Lupa](https://github.com/nbirillo/Lupa) framework.
 
 ## Glossary
 - Import directive: `import com.google.gson.Gson`;
