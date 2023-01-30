@@ -17,7 +17,7 @@ This statistic has also been divided by Python language version:
 - `PYTHON_MIXED` — both Python 2 and Python 3 can be used in the project;
 - `PYTHON_UNKNOWN` — the version of Python used in the project could not be determined.
 
-The collected data can be found [here](../../resources/python_call_expressions/data).
+The collected data can be found [here](https://github.com/GirZ0n/Lupa-Visualization/tree/main/resources/python_call_expressions/data).
 
 ## Pages
 There are two pages in the visualization:

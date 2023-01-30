@@ -6,7 +6,7 @@ This app will allow you to visualize the statistics of import directives in Kotl
 - Fully qualified name of import directive (FQ name): `com.google.gson.Gson`.
 
 ## Data
-The collected data can be found [here](../../resources/kotlin_imports/data).
+The collected data can be found [here](https://github.com/GirZ0n/Lupa-Visualization/tree/main/resources/kotlin_imports/data).
 
 ## Pages
 There are three pages in the visualization:

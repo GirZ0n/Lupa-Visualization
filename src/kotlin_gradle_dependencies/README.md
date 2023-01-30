@@ -9,7 +9,7 @@ Gradle dependency — `implementation "org.jetbrains.kotlin:kotlin-reflect:1.5.1
 - version: `1.5.10`.
 
 ## Data
-The collected data can be found [here](../../resources/kotlin_gradle_dependencies/data).
+The collected data can be found [here](https://github.com/GirZ0n/Lupa-Visualization/tree/main/resources/kotlin_gradle_dependencies/data).
 
 ## Pages
 There are three pages in the visualization:
