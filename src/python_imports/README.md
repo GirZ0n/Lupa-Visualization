@@ -1,5 +1,5 @@
 # Python Imports
-This app will allow you to visualize the statistics of import directives in Python that were gathered using [Lupa](https://github.com/nbirillo/Lupa) framework.
+This app will allow you to visualize the statistics of import directives in Python that were gathered using [Lupa](https://github.com/JetBrains-Research/Lupa) framework.
 
 ## Glossary
 - Import directive: `from plotly.express import scatter`;
