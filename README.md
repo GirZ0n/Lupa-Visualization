@@ -1,5 +1,5 @@
 # Lupa-Visualization
-This repository contains the source code of the statistics visualizations gathered with the [Lupa](https://github.com/nbirillo/Lupa) framework. 
+This repository contains the source code of the statistics visualizations gathered with the [Lupa](https://github.com/JetBrains-Research/Lupa) framework. 
 
 The collected data is located in the [`resources`](./resources) folder. You can use them for your own analysis and visualization.
 
