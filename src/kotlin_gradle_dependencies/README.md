@@ -1,5 +1,5 @@
 # Kotlin Gradle Dependencies
-This app will allow you to visualize the statistics of gradle dependencies in Kotlin that were gathered using [Lupa](https://github.com/nbirillo/Lupa) framework.
+This app will allow you to visualize the statistics of gradle dependencies in Kotlin that were gathered using [Lupa](https://github.com/JetBrains-Research/Lupa) framework.
 
 ## Glossary
 Gradle dependency — `implementation "org.jetbrains.kotlin:kotlin-reflect:1.5.10"` where:

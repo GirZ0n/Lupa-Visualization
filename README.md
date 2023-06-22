@@ -1,5 +1,8 @@
 # Lupa-Visualization
-This repository contains the source code of the statistics visualizations gathered with the [Lupa](https://github.com/nbirillo/Lupa) framework. 
+[![JetBrains Research](https://jb.gg/badges/research.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+[![Python build](https://github.com/GirZ0n/Lupa-Visualization/actions/workflows/main.yml/badge.svg)](https://github.com/GirZ0n/Lupa-Visualization/actions/workflows/main.yml)
+
+This repository contains the source code of the statistics visualizations gathered with the [Lupa](https://github.com/JetBrains-Research/Lupa) framework. 
 
 The collected data is located in the [`resources`](./resources) folder. You can use them for your own analysis and visualization.
 

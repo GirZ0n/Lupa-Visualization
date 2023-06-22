@@ -1,5 +1,5 @@
 # Python Call Expressions
-This app will allow you to visualize the statistics of call expressions in Python that were gathered using [Lupa](https://github.com/nbirillo/Lupa) framework.
+This app will allow you to visualize the statistics of call expressions in Python that were gathered using [Lupa](https://github.com/JetBrains-Research/Lupa) framework.
 
 ## Glossary
 - Call expression: `np.zeros()`;
